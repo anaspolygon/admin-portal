@@ -1,13 +1,12 @@
-import AuthLayout from "@/app/components/AuthLayout";
-import LoginForm from "@/app/components/LoginForm";
 import React from "react";
+import LoginForm from "@/app/components/LoginForm";
+import AuthLayout from "../components/AuthLayout";
 
 const LoginPage = () => {
   return (
-    <div className="w-full h-screen flex items-center justify-center">
-      {/* <AuthLayout /> */}
+    <AuthLayout>
       <LoginForm />
-    </div>
+    </AuthLayout>
   );
 };
 

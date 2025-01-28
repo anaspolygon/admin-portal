@@ -1,11 +1,12 @@
-import SignupForm from "@/app/components/SignupForm";
 import React from "react";
+import SignupForm from "@/app/components/SignupForm";
+import AuthLayout from "../components/AuthLayout";
 
 const SignupPage = () => {
   return (
-    <div className="w-full h-screen flex items-center justify-center">
+    <AuthLayout>
       <SignupForm />
-    </div>
+    </AuthLayout>
   );
 };
 

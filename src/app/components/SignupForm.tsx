@@ -2,10 +2,12 @@
 import React from "react";
 import { Input, Button, Typography, Card } from "antd";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const { Title } = Typography;
 
 const SignupForm = () => {
+  const router = useRouter();
   return (
     <div className="w-[500px]">
       <Card className="shadow-lg">
@@ -25,7 +27,12 @@ const SignupForm = () => {
           size="large"
           placeholder="Confrim password"
         />
-        <Button type="primary" size="large" className="w-full">
+        <Button
+          onClick={() => router.push("/dashboard")}
+          type="primary"
+          size="large"
+          className="w-full"
+        >
           Sign Up
         </Button>
         <div className="flex justify-between mt-4">

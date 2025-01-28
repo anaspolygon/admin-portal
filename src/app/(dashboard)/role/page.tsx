@@ -25,7 +25,7 @@ const RolePage = () => {
       </div>
       <TableComponent />
       <Modal
-        title="Create a user"
+        title="Create a role"
         centered
         open={modal2Open}
         onOk={() => setModal2Open(false)}
@@ -33,14 +33,20 @@ const RolePage = () => {
       >
         <Input size="large" placeholder="Enter a role name" />
         <h2 className="my-4 font-bold">Role Permissions</h2>
-        {Array.from("123456").map((_,index) => (
-          <div className={`flex items-center gap-5  ${index === 0 ? "border-y" :"border-b"} py-3`}>
+        {Array.from("1").map((_, index) => (
+          <div
+            className={`flex items-center gap-5  ${
+              index === 0 ? "border-y" : "border-b"
+            } py-3`}
+          >
             <div>
-              <h2>Home</h2>
+              <h2 className="font-bold">Home Page</h2>
             </div>
             <div>
+              <Checkbox onChange={onChange}>Create</Checkbox>
               <Checkbox onChange={onChange}>Read</Checkbox>
-              <Checkbox onChange={onChange}>Write</Checkbox>
+              <Checkbox onChange={onChange}>Update</Checkbox>
+              <Checkbox onChange={onChange}>Delete</Checkbox>
             </div>
           </div>
         ))}
