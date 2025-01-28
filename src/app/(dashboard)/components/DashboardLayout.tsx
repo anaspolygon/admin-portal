@@ -17,7 +17,7 @@ const { Header, Content, Footer, Sider } = Layout;
 
 type MenuItem = Required<MenuProps>["items"][number];
 
-function getItem(
+function getMenu(
   label: React.ReactNode,
   key: React.Key,
   icon?: React.ReactNode,
@@ -31,13 +31,28 @@ function getItem(
   } as MenuItem;
 }
 
+function getItem(
+  label: React.ReactNode,
+  key: React.Key,
+  url: string,
+  icon?: React.ReactNode,
+  children?: MenuItem[]
+): MenuItem {
+  return {
+    key,
+    icon,
+    children,
+    label: <Link href={url}>{label}</Link>,
+  } as MenuItem;
+}
+
 const items: MenuItem[] = [
   //   getItem("Option 1", "1", <PieChartOutlined />),
   //   getItem("Option 2", "2", <DesktopOutlined />),
-  getItem("Users", "sub1", <UserOutlined />, [
-    getItem("User", "3",),
-    getItem("Role", "4"),
-    getItem("Alex", "5"),
+  getMenu("Users", "sub1", <UserOutlined />, [
+    getItem("User", "3", "/user"),
+    getItem("Role", "4", "/role"),
+    getItem("Alex", "5", "/permission"),
   ]),
   //   getItem("Team", "sub2", <TeamOutlined />, [
   //     getItem("Team 1", "6"),
