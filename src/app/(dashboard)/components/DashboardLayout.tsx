@@ -77,6 +77,7 @@ const DashboardLayout: React.FC<Props> = ({ children }) => {
         collapsible
         collapsed={collapsed}
         onCollapse={(value) => setCollapsed(value)}
+        width={300}
       >
         <div className="demo-logo-vertical" />
         <Menu
