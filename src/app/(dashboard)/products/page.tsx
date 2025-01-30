@@ -1,12 +1,13 @@
 "use client";
 import React, { useState } from "react";
-import { SearchOutlined } from "@ant-design/icons";
-import { Input, Button, Drawer, DatePicker, Select } from "antd";
+import { SearchOutlined, FilterOutlined } from "@ant-design/icons";
+import { Input, Button, Drawer, DatePicker, Select, Segmented } from "antd";
 import type { DatePickerProps } from "antd";
+
 import TableComponent from "../components/TableComponent";
 
 const page = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const showDrawer = () => {
     setOpen(true);
@@ -32,7 +33,7 @@ const page = () => {
           placeholder="Search by product name..."
           prefix={<SearchOutlined />}
         />
-        <Button size="large" type="primary" onClick={showDrawer}>
+        <Button icon={<FilterOutlined />} size="large" onClick={showDrawer}>
           Filters
         </Button>
         <Drawer title="Table Filters" onClose={onClose} open={open}>
