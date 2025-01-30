@@ -1,13 +1,10 @@
 "use client";
 import React, { ReactNode, useState } from "react";
 import {
-  DesktopOutlined,
-  FileOutlined,
-  PieChartOutlined,
-  TeamOutlined,
   UserOutlined,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
+  ShoppingOutlined,
 } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import { Breadcrumb, Layout, Menu, theme, Button } from "antd";
@@ -54,11 +51,11 @@ const items: MenuItem[] = [
     getItem("Role", "4", "/role"),
     getItem("Alex", "5", "/permission"),
   ]),
-  //   getItem("Team", "sub2", <TeamOutlined />, [
-  //     getItem("Team 1", "6"),
-  //     getItem("Team 2", "8"),
-  //   ]),
-  //   getItem("Files", "9", <FileOutlined />),
+  getMenu("Ecommerce", "sub2", <ShoppingOutlined />, [
+    getItem("Products", "6", "/products"),
+    getItem("Role", "4", "/role"),
+    getItem("Alex", "5", "/permission"),
+  ]),
 ];
 
 interface Props {
