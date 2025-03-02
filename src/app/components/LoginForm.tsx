@@ -51,7 +51,7 @@ const LoginForm = () => {
         <Input onChange={(e) => {
           setEmail(e.target.value); 
           setEmailError("")}
-        } size="large" placeholder="Email" />
+        }  size="large" placeholder="Email" />
         {emailError && <p className="text-red-500 mt-2">{emailError}</p>}
         <Input.Password onChange={(e) => {
           setPassword(e.target.value);
