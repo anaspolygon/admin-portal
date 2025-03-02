@@ -11,9 +11,12 @@
   "dependencies": {
     "@ant-design/nextjs-registry": "^1.0.2",
     "antd": "^5.23.2",
+    "bcryptjs": "^3.0.2",
+    "jsonwebtoken": "^9.0.2",
     "next": "15.1.6",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "typeorm": "^0.3.20"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
